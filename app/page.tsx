@@ -2,7 +2,7 @@ export default function HomePage() {
   return (
     <main>
       <section id="home" style={{ padding: "50px 20px" }}>
-        <h1>Welcome to My Portfolio</h1>
+        <h1>Ayush's Portfolio</h1>
         <p>This is a showcase of my projects and skills.</p>
       </section>
 

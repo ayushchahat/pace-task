@@ -1,33 +1,28 @@
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 1rem;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-  }
-  
-  .transparent {
-    background-color: transparent;
-  }
-  
-  .white {
-    background-color: white;
-  }
-  
-  .brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .links {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .navLink {
-    text-decoration: none;
-    color: inherit;
-    font-size: 1rem;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: background-color 0.3s ease;
+}
+
+.navbar.navbar-white {
+  background-color: #ffffff;
+}
+
+.navbar.navbar-transparent {
+  background-color: transparent;
+}
+
+.nav-link {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #0070f3;
+}

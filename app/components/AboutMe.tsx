@@ -27,10 +27,10 @@ const AboutMe: React.FC<AboutMeProps> = ({
         maxWidth: "100%",
         width: "100%",
         margin: "2rem auto",
-        flexWrap: "wrap", // To ensure responsiveness
+        flexWrap: "wrap", 
       }}
     >
-      {/* Profile Image */}
+      
       <div style={{ flex: "0 0 auto", marginRight: "2rem" }}>
         <img
           src="/ayush-profile.jpeg"
@@ -47,7 +47,6 @@ const AboutMe: React.FC<AboutMeProps> = ({
         />
       </div>
 
-      {/* Text Content */}
       <div style={{ flex: "1", textAlign: "left" }}>
         <h2
           style={{

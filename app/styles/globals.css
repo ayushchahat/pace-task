@@ -1,12 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 /* globals.css */
 
 /* Star animation */
 @keyframes animStar {
   from {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
   to {
     transform: translateY(-2000px);
@@ -33,8 +34,8 @@
     transform-origin: left;
   }
   to {
-    transform-origin: left;
     transform: scaleX(1);
+    transform-origin: left;
   }
 }
 
@@ -42,7 +43,7 @@
 .background {
   background: linear-gradient(45deg, #ff0066, #ff6600, #66ff66);
   background-size: 400% 400%;
-  animation: BackgroundAnimation 10s ease infinite;
+  animation: BackgroundAnimation 70s ease infinite;
 }
 
 /* Apply to the star animation */
@@ -53,7 +54,7 @@
   width: 100%;
   height: 100%;
   background: url('/path/to/your/star-image.png') repeat;
-  animation: animStar 100s linear infinite;
+  animation: animStar 150s linear infinite; /* Smoother animation */
 }
 
 .progress-bar {
@@ -66,52 +67,107 @@
   height: 100%;
   background-color: #4caf50;
   transform-origin: left;
-  animation: progress 2s ease-out forwards;
+  animation: progress 1.5s ease-in-out forwards;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-      sans-serif;
-    line-height: 1.6;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  margin-top: 60px; /* Adjust to ensure content doesn't overlap with the navbar */
+}
+
+section {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+h1,
+h2 {
+  color: #363636;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar-transparent {
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.2s;
+}
+
+.navbar-white {
+  background-color: rgba(234, 236, 239, 0.81);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s;
+}
+
+.navLink {
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* Social icons */
+.socialicons {
+  color: white;
+  transition: all 0.8s;
+}
+
+.socialicons:hover {
+  color: black;
+  transform: scale(1.1);
+}
+
+/* Card hover effect */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.175);
+  transform: translateY(-2px);
+}
+
+/* Skill tabs */
+.skills-tabs {
+  display: flex;
+  flex-grow: 1;
+}
+
+.skills-tab {
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Typist height adjustments */
+.typist {
+  min-height: 6rem;
+}
+
+@media (min-width: 360px) {
+  .typist {
+    min-height: 4rem;
   }
-  
-  main {
-    margin-top: 60px; /* Adjust to ensure content doesn't overlap with the navbar */
+}
+
+@media (min-width: 768px) {
+  .typist {
+    min-height: 2.5rem;
   }
-  
-  section {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 20px;
-  }
-  
-  h1, h2 {
-    color: #333;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
-  
-  .navbar-transparent {
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-  }
-  
-  .navbar-white {
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-  }
-  
-  .navLink {
-    margin: 0 15px;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-  }
-  
+}

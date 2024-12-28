@@ -1,10 +1,5 @@
-import "./styles/globals.css";
 import Navigation from "./components/Navigation";
-
-export const metadata = {
-  title: "Your Portfolio",
-  description: "Personal Portfolio created using Next.js and TypeScript",
-};
+import "./styles/globals.css";
 
 export default function RootLayout({
   children,
@@ -13,7 +8,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navigation />
+        {children}
+      </body>
     </html>
   );
 }

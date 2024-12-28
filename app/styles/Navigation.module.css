@@ -1,28 +1,91 @@
+/* Common styles for the navigation bar */
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  transition: background-color 0.3s ease;
+  padding: 1rem 2rem;
+  z-index: 10;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
-.navbar.navbar-white {
+.navbar-white {
   background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.navbar.navbar-transparent {
+.navbar-transparent {
   background-color: transparent;
 }
 
+/* Navbar brand styles */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* Links container styles */
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden; /* Prevent overflow */
+  flex-wrap: wrap; /* Wrap items to next line if they overflow */
+}
+
+/* Individual link styles */
 .nav-link {
-  margin: 0 1rem;
   text-decoration: none;
   color: #333;
   font-weight: bold;
   transition: color 0.3s ease;
+  white-space: nowrap; /* Prevent wrapping of text */
 }
 
 .nav-link:hover {
   color: #0070f3;
+}
+
+/* Toggle button for mobile */
+.toggle-btn {
+  display: none;
+}
+
+/* Mobile-responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0;
+  }
+
+  .toggle-btn {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+  }
 }

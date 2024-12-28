@@ -39,8 +39,9 @@
   }
   
   .carouselImage {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Make all images the same width */
+    height: 300px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensure images maintain aspect ratio and fill space */
     border-radius: 10px;
   }
   

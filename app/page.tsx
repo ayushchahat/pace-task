@@ -4,7 +4,7 @@ import MainBody from "./components/MainBody";
 import AboutMe from "./components/AboutMe";
 import Project from "./components/Project/Project";
 import Skills from "./components/Skills/Skills";
-
+import Footer from "./components/Footer/Footer";
 const HomePage = () => {
   return (
     <main>
@@ -63,6 +63,7 @@ const HomePage = () => {
             { name: "Time Management", value: 85 },
           ]}
         />
+        <Footer />
       </section>
     </main>
   );

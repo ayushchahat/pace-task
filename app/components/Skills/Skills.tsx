@@ -1,24 +1,29 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import SkillsTab from "./SkillsTab";
-import { useScrollPosition } from "../hooks/useScrollPosition";
 
 const Skills = ({ heading, hardSkills, softSkills }: any) => {
-  const skillsRef = useRef(null);
+  const skillsRef = useRef<HTMLElement>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
 
-  useScrollPosition(
-    ({ currPos }) => {
-      if (!isScrolled && currPos.y - 400 < 0) setIsScrolled(true);
-    },
-    [],
-    skillsRef
-  );
+  useEffect(() => {
+    const handleScroll = () => {
+      const elementPosition = skillsRef.current?.getBoundingClientRect();
+      if (elementPosition && !isScrolled && elementPosition.top - 400 < 0) {
+        setIsScrolled(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isScrolled]);
 
   return (
     <section ref={skillsRef} className="skills-section">

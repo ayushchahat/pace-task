@@ -18,20 +18,26 @@ const AboutMe: React.FC<AboutMeProps> = ({
     <div
       style={{
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "center", // Center the content on larger screens
         alignItems: "center",
         padding: "3rem 2rem",
         backgroundColor: "#f4f7fa",
         borderRadius: "8px",
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-        maxWidth: "100%",
-        width: "100%",
-        margin: "2rem auto",
-        flexWrap: "wrap", 
+        width: "100%", // Full-width
+        margin: "2rem 0", // Removed auto margin for full width
+        flexDirection: "column", // Stack on smaller screens
+        textAlign: "center", // Center text by default
       }}
     >
-      
-      <div style={{ flex: "0 0 auto", marginRight: "2rem" }}>
+      <div
+        style={{
+          marginBottom: "2rem",
+          display: "flex",
+          justifyContent: "center", // Center image
+          flexWrap: "wrap", // Allow wrapping for responsiveness
+        }}
+      >
         <img
           src="/ayush-profile.jpeg"
           alt="Ayush Kumar"
@@ -47,7 +53,7 @@ const AboutMe: React.FC<AboutMeProps> = ({
         />
       </div>
 
-      <div style={{ flex: "1", textAlign: "left" }}>
+      <div style={{ width: "100%" }}>
         <h2
           style={{
             fontSize: "2.5rem",

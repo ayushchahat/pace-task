@@ -1,57 +1,80 @@
+/* Global styles to match main body styling */
 .aboutMe {
-    margin: 0;
-    padding: 3rem 1rem;
-    background-color: #f4f7fa;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    margin: 2rem auto;
-    text-align: center;
+  margin: 0;
+  padding: 3rem 1rem;
+  background-color: #f4f7fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%; /* Ensure it spans the full width */
+  margin: 2rem 0; /* Removed auto margin for full width */
+  text-align: center;
+}
+
+/* Responsive Image and Content */
+.aboutMe img {
+  width: 100%; /* Ensure image adjusts to container size */
+  max-width: 250px; /* Ensure maximum image size */
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.aboutMe img:hover {
+  transform: scale(1.05);
+}
+
+.aboutMe h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.aboutMe p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .aboutMe {
+    padding: 2rem 1rem;
   }
   
   .aboutMe h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 1rem;
+    font-size: 2rem;
   }
-  
+
   .aboutMe p {
-    font-size: 1.2rem;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    font-size: 1rem;
   }
-  
-  .profilePic {
-    object-fit: cover;
-    display: block;
-    border-radius: 50%;
-    margin-bottom: 1.5rem;
-    transition: transform 0.3s ease;
+
+  .aboutMe img {
+    max-width: 200px; /* Smaller image on smaller screens */
   }
-  
-  .profilePic:hover {
-    transform: scale(1.05);
-  }
-  
-  .resume-btn {
-    background-color: #0070f3;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .resume-btn:hover {
-    background-color: #005bb5;
-  }
-  
-  .resume-btn:active {
-    background-color: #004a8a;
-  }
-  
+}
+
+/* Button Styles */
+.resume-btn {
+  background-color: #0070f3;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: #005bb5;
+}
+
+.resume-btn:active {
+  background-color: #004a8a;
+}

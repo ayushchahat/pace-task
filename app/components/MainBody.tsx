@@ -2,14 +2,29 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons"; // Correct package
 
 interface MainBodyProps {
   title: string;
   message: string;
   icons: { url: string; name: string }[];
+  gradient: string;
 }
 
 const MainBody: React.FC<MainBodyProps> = ({ title, message, icons }) => {
+  const getIcon = (name: string) => {
+    switch (name) {
+      case "github":
+        return faGithub;
+      case "linkedin":
+        return faLinkedin;
+      case "twitter":
+        return faTwitter;
+      default:
+        return faQuestionCircle; // Fallback icon
+    }
+  };
+
   return (
     <div
       id="home"
@@ -56,17 +71,7 @@ const MainBody: React.FC<MainBodyProps> = ({ title, message, icons }) => {
             onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
             onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
           >
-            <FontAwesomeIcon
-              icon={
-                icon.name === "github"
-                  ? faGithub
-                  : icon.name === "linkedin"
-                  ? faLinkedin
-                  : icon.name === "twitter"
-                  ? faTwitter
-                  : undefined 
-              }
-            />
+            <FontAwesomeIcon icon={getIcon(icon.name)} />
           </a>
         ))}
       </div>

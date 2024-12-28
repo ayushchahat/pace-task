@@ -25,12 +25,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <span key={index}>{tech}</span>
         ))}
       </div>
-      <a href={repoLink} target="_blank" rel="noopener noreferrer" className={styles.btn}>
-        View Repository
-      </a>
-      <a href={demoLink} target="_blank" rel="noopener noreferrer" className={styles.btn}>
-        View Demo
-      </a>
+      <div className={styles.btnContainer}>
+        <a href={repoLink} target="_blank" rel="noopener noreferrer" className={styles.btn}>
+          View Repository
+        </a>
+        <a href={demoLink} target="_blank" rel="noopener noreferrer" className={styles.btn}>
+          View Demo
+        </a>
+      </div>
     </div>
   );
 };

@@ -19,20 +19,24 @@
 }
 
 .projectList {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center align cards horizontally */
   gap: 30px;
-  justify-items: center;
 }
 
+
 .projectCard {
-  background-color: #fff;
-  border-radius: 10px;
+  background-color: #ffffff;
+  border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 20px;
   width: 100%;
   max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .projectCard:hover {
@@ -41,43 +45,52 @@
 }
 
 .projectCard h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: bold;
   color: #333;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .projectCard p {
   font-size: 1rem;
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .projectCard .technologies {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .projectCard .technologies span {
   background-color: #007bff;
   color: #fff;
-  padding: 8px 12px;
+  padding: 6px 10px;
+  font-size: 0.85rem;
   border-radius: 5px;
-  font-size: 0.9rem;
+}
+
+.projectCard .btnContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
 
 .projectCard .btn {
   background-color: #007bff;
   color: white;
-  padding: 10px 20px;
-  font-size: 1rem;
+  padding: 8px 16px;
+  font-size: 0.9rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   text-decoration: none;
-  margin-top: 20px;
+  transition: background-color 0.3s ease;
 }
 
 .projectCard .btn:hover {
@@ -94,7 +107,8 @@
   }
 
   .projectList {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
 

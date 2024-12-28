@@ -1,9 +1,5 @@
-// app/components/Project/ProjectCard.tsx
 import React from "react";
-import CardFooter from "./CardFooter";
-import Language from "./Language";
-import CardButtons from "./CardButtons";
-import styles from "../../styles/ProjectCard.module.css";
+import styles from "../../styles/Project.module.css";
 
 interface ProjectCardProps {
   title: string;
@@ -13,16 +9,28 @@ interface ProjectCardProps {
   technologies: string[];
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, repoLink, demoLink, technologies }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  title,
+  description,
+  repoLink,
+  demoLink,
+  technologies,
+}) => {
   return (
-    <div className={styles.card}>
-      <div className={styles.cardContent}>
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <Language technologies={technologies} />
-        <CardButtons repoLink={repoLink} demoLink={demoLink} />
+    <div className={styles.projectCard}>
+      <h3>{title}</h3>
+      <p>{description}</p>
+      <div className={styles.technologies}>
+        {technologies.map((tech, index) => (
+          <span key={index}>{tech}</span>
+        ))}
       </div>
-      <CardFooter />
+      <a href={repoLink} target="_blank" rel="noopener noreferrer" className={styles.btn}>
+        View Repository
+      </a>
+      <a href={demoLink} target="_blank" rel="noopener noreferrer" className={styles.btn}>
+        View Demo
+      </a>
     </div>
   );
 };

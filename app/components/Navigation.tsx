@@ -38,10 +38,10 @@ const Navigation: React.FC = () => {
         &#9776; 
       </button>
       <div className={`${styles["nav-links"]} ${menuOpen ? styles.show : ""}`}>
-        <a className={styles["nav-link"]} href="#projects">Projects</a>
-        <a className={styles["nav-link"]} href="#about">About</a>
-        <a className={styles["nav-link"]} href="#skills">Skills</a>
         <a className={styles["nav-link"]} href="https://drive.google.com/file/d/1E9fQ05ieyej34VWkwu8xYdI5zT7ZrRL-/view?usp=sharing">Resume</a>
+        <a className={styles["nav-link"]} href="#aboutme">About</a> 
+        <a className={styles["nav-link"]} href="#projects">Projects</a>
+        <a className={styles["nav-link"]} href="#skills">Skills</a>
       </div>
     </nav>
   );

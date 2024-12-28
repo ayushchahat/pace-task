@@ -1,0 +1,26 @@
+.skills-section {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .skills-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .skillsBar {
+    margin: 15px 0;
+  }
+  
+  .skillName {
+    margin-bottom: 10px;
+  }
+  
+  .progressBar {
+    height: 8px;
+    border-radius: 5px;
+  }
+  

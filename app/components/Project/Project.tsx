@@ -10,7 +10,7 @@ const Project = () => {
         "An IoT-based smart agriculture system for monitoring and controlling farm conditions.",
       repoLink: "https://github.com/ayushchahat/Smart_Agro",
       demoLink: "https://smart-agro.com",
-      technologies: ["Node.js", "Express", "MongoDB", "IoT"],
+      technologies: ["MongoDB, Express.js, React.js, Node.js"],
     },
     {
       title: "GoFoodie",
@@ -18,7 +18,7 @@ const Project = () => {
         "A full-stack application for food delivery, providing real-time order tracking and notifications.",
       repoLink: "https://github.com/ayushchahat/Gofood",
       demoLink: "https://gofood-frontend-my1b.onrender.com/",
-      technologies: ["React", "Node.js", "MongoDB"],
+      technologies: [ "React.js, Bootstrap, Node.js, Express.js, MongoDB"],
     },
     {
       title: "Chat-Now",
@@ -26,7 +26,7 @@ const Project = () => {
         "A real-time messaging app with support for one-on-one and group chats.",
       repoLink: "https://github.com/ayushchahat/Chat_Bot",
       demoLink: "https://chat-now-7mbr.onrender.com/",
-      technologies: ["React.js", "Socket.IO", "Node.js"],
+      technologies: [" React.js, Chakra UI, Node.js, Express.js, MongoDB, Socket.io"],
     },
   ];
 

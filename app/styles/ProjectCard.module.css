@@ -1,0 +1,25 @@
+/* app/styles/ProjectCard.module.css */
+.card {
+  width: 300px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.cardContent h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cardContent p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.footer {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 10px;
+}

@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
-import AboutMe from "./components/AboutMe";
 import MainBody from "./components/MainBody";
+import AboutMe from "./components/AboutMe";
+import Project from "./components/Project/Project";
 
-export default function HomePage() {
+const HomePage = () => {
   return (
     <main>
       <MainBody
@@ -11,18 +12,9 @@ export default function HomePage() {
         title="Ayush's Portfolio"
         message="Welcome to my portfolio! Explore my projects, skills, and more."
         icons={[
-          {
-            url: "https://github.com/ayushchahat",
-            name: "github",
-          },
-          {
-            url: "https://www.linkedin.com/in/ayush-kumar11",
-            name: "linkedin",
-          },
-          {
-            url: "https://x.com/AyushCh72327242?t=i60SWcPPPNHqyJG5Oj6bJg&s=09",
-            name: "twitter",
-          },
+          { url: "https://github.com/ayushchahat", name: "github" },
+          { url: "https://www.linkedin.com/in/ayush-kumar11", name: "linkedin" },
+          { url: "https://x.com/AyushCh72327242?t=i60SWcPPPNHqyJG5Oj6bJg&s=09", name: "twitter" },
         ]}
       />
       <section
@@ -41,37 +33,9 @@ export default function HomePage() {
         />
       </section>
 
-      {/* Projects Section */}
-      <section
-        id="projects"
-        style={{
-          padding: "50px 20px",
-          backgroundColor: "#fff",
-          textAlign: "center",
-        }}
-      >
-        <h2 style={{ fontSize: "2rem", fontWeight: "bold", color: "#333" }}>
-          Projects
-        </h2>
-        <p style={{ fontSize: "1.2rem", color: "#555" }}>
-          Explore some of the projects I have worked on:
-        </p>
-        <ul style={{ listStyleType: "none", padding: 0 }}>
-          <li style={{ marginBottom: "1rem" }}>
-            <strong>Project 1:</strong> A full-stack application for food
-            delivery.
-          </li>
-          <li style={{ marginBottom: "1rem" }}>
-            <strong>Project 2:</strong> An e-commerce website with React and
-            Node.js.
-          </li>
-          <li style={{ marginBottom: "1rem" }}>
-            <strong>Project 3:</strong> A personal blog platform with Next.js.
-          </li>
-        </ul>
-      </section>
+      {/* Use the Project component to dynamically display projects */}
+      <Project />
 
-      {/* Skills Section */}
       <section
         id="skills"
         style={{
@@ -150,4 +114,6 @@ export default function HomePage() {
       </section>
     </main>
   );
-}
+};
+
+export default HomePage;

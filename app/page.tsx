@@ -4,6 +4,7 @@ import MainBody from "./components/MainBody";
 import AboutMe from "./components/AboutMe";
 import Project from "./components/Project/Project";
 import Skills from "./components/Skills/Skills";
+import Achievements from "./components/Achievements/Achievements";
 import Footer from "./components/Footer/Footer";
 const HomePage = () => {
   return (
@@ -14,8 +15,14 @@ const HomePage = () => {
         message="Welcome to my portfolio! Explore my projects, skills, and more."
         icons={[
           { url: "https://github.com/ayushchahat", name: "github" },
-          { url: "https://www.linkedin.com/in/ayush-kumar11", name: "linkedin" },
-          { url: "https://x.com/AyushCh72327242?t=i60SWcPPPNHqyJG5Oj6bJg&s=09", name: "twitter" },
+          {
+            url: "https://www.linkedin.com/in/ayush-kumar11",
+            name: "linkedin",
+          },
+          {
+            url: "https://x.com/AyushCh72327242?t=i60SWcPPPNHqyJG5Oj6bJg&s=09",
+            name: "twitter",
+          },
         ]}
       />
 
@@ -37,6 +44,30 @@ const HomePage = () => {
 
       {/* Project Section */}
       <Project />
+      {/* Achievements Section */}
+      <Achievements
+        heading="Achievements"
+        achievements={[
+          {
+            img: "/images/achievement1.png",
+            title: "Knight on LeetCode",
+            description:
+              "Achieved 'Knight' status on LeetCode by solving 495 DSA problems.",
+          },
+          {
+            img: "/images/achievement2.png",
+            title: "3-Star on GeeksforGeeks",
+            description:
+              "Earned 3-star status on GeeksforGeeks by solving 657 DSA problems.",
+          },
+          {
+            img: "/images/achievement3.png",
+            title: "LeetCode Weekly Contest",
+            description:
+              "Ranked 166th globally out of 35,709 participants in Weekly Contest 414.",
+          },
+        ]}
+      />
 
       {/* Skills Section */}
       <section

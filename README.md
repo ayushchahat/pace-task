@@ -6,7 +6,7 @@ Welcome to my portfolio repository! This project showcases my skills, achievemen
 
 ## Live Demo
 
-Visit the live portfolio: [Ayush's Portfolio]([https://pace-task-eg7kb3wf2-ayushchahats-projects.vercel.app/](https://pace-task-pied.vercel.app/))
+Visit the live portfolio: [Ayush's Portfolio](https://pace-task-eg7kb3wf2-ayushchahats-projects.vercel.app/)
 
 ## Features
 

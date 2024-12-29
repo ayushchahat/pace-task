@@ -81,17 +81,17 @@ const HomePage = () => {
         <Skills
           heading="Skills"
           hardSkills={[
-            { name: "JavaScript/TypeScript", value: 90 },
-            { name: "React.js and Next.js", value: 85 },
-            { name: "Node.js and Express.js", value: 80 },
-            { name: "MongoDB and SQL", value: 75 },
-            { name: "HTML, CSS, and Tailwind", value: 95 },
+            { name: "JavaScript/TypeScript", value: 75 },
+            { name: "React.js and Next.js", value: 80 },
+            { name: "Node.js and Express.js", value: 70 },
+            { name: "MongoDB and SQL", value: 85 },
+            { name: "HTML, CSS, and Tailwind", value: 90 },
           ]}
           softSkills={[
-            { name: "Communication", value: 85 },
+            { name: "Communication", value: 80 },
             { name: "Problem Solving", value: 90 },
-            { name: "Team Collaboration", value: 80 },
-            { name: "Time Management", value: 85 },
+            { name: "Team Collaboration", value: 85 },
+            { name: "Time Management", value: 70 },
           ]}
         />
       </section>

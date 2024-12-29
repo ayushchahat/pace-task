@@ -1,6 +1,6 @@
 # Ayush's Portfolio
 
-[![Deployed Portfolio](./public/MergedImages.png)](https://pace-task-eg7kb3wf2-ayushchahats-projects.vercel.app/)
+[![Deployed Portfolio](./MergedImages.png)](https://pace-task-eg7kb3wf2-ayushchahats-projects.vercel.app/)
 
 Welcome to my portfolio repository! This project showcases my skills, achievements, and projects in the field of web development. The portfolio is built using Next.js and Tailwind CSS, ensuring a responsive and modern design.
 
@@ -82,7 +82,6 @@ A real-time messaging app with support for one-on-one and group chats.
 
 - **Frontend:** React.js, Next.js, Tailwind CSS
 - **Backend:** Node.js, Express.js
-- **Database:** MongoDB
 
 ## Deployment
 

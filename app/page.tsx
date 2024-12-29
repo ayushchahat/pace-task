@@ -94,8 +94,8 @@ const HomePage = () => {
             { name: "Time Management", value: 85 },
           ]}
         />
-        <Footer />
       </section>
+      <Footer />
     </main>
   );
 };

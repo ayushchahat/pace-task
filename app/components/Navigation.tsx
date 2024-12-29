@@ -33,7 +33,7 @@ const Navigation: React.FC = () => {
       className={`${styles.navbar} ${isTop ? styles["navbar-transparent"] : styles["navbar-white"]}`}
       ref={navbarRef}
     >
-      <div className={styles["navbar-brand"]}>{"<Ayush Kumar />"}</div>
+      <div className={styles["navbar-brand"]}>{"Ayush Kumar"}</div>
       <button className={styles["toggle-btn"]} onClick={toggleMenu}>
         &#9776; 
       </button>

@@ -95,7 +95,7 @@ If you'd like to contribute to this project, feel free to open an issue or submi
 
 For any inquiries, feel free to reach out via:
 
-- **Email:** [ayush110903kumar@gmail.com](mailto:ayush110903kumar@gmail.com) (Replace with your actual email)
+- **Email:** [ayush110903kumar@gmail.com](mailto:ayush110903kumar@gmail.com) 
 - **LinkedIn:** [LinkedIn Profile](#)
 - **GitHub:** [Ayush Kumar](https://github.com/ayushchahat)
 
